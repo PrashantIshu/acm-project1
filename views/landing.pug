@@ -1,0 +1,13 @@
+extends base
+
+block content
+    .container
+        img#container-img(src="https://images.pexels.com/photos/3820281/pexels-photo-3820281.jpeg?auto=compress&cs=tinysrgb&dpr=2", alt="secret-bg")
+        .content
+            h1 Secrets
+            p Don't Worry! Your Secrets are safe with me.
+            if user
+                a(href='/my-secrets') Your Secret
+            else
+                a.login(href="/login") Log In
+                a.signup(href="/signup") Sign Up

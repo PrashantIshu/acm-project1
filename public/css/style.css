@@ -1,0 +1,270 @@
+body {
+    background-color: #dff9fb;
+}
+
+h2 {
+    width: 18rem;
+    display: block;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-left: 15px;
+    color: #7dd56f;
+}
+
+form {
+    /* #f1f2f6 */
+    background-color: #ffff;
+    /* border: 1px solid black; */
+    height: 21rem;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 115px;
+    border-radius: 7.5px;
+    box-shadow: 5px 5px 25px grey;
+}
+
+label {
+    width: inherit;
+    display: block;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+}
+
+input {
+    display: block;
+    margin-left: 15px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f2f6;
+}
+
+button {
+    display: block;
+    width: 20%;
+    height: 35px;
+    margin-top: 25px;
+    margin-left: 15px;
+    border: 1px solid lightgreen;
+    border-radius: 25px;
+    background-color: #7dd56f;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #55c57a;
+}
+
+p {
+    display: block;
+    position: relative;
+    top: 7.5rem;
+    left: 45%;
+    width: 10rem;
+    font-size: 15px;;
+}
+
+/* landing-page */
+* {
+    box-sizing: border-box;
+  }
+  
+  
+.container {
+    position: relative;
+    height: 600px;
+    /* margin: 0 auto; */
+    font-family: Arial;
+    font-size: 25px;
+}
+  
+.container img {
+    vertical-align: middle;
+    width: 1265px;
+    height: 600px;
+}
+  
+ .container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.container h1 {
+    position: relative;
+    bottom: 50px;
+    width: 20%;
+    transition: width 4s;
+}
+
+@keyframes secret {
+    from{text-decoration: none;}
+    to{text-decoration: underline;}
+}
+
+.container h1:hover {
+    animation: secret 2s;
+}
+
+
+.container p {
+    position: absolute;
+    color: white;
+    width: 500px;
+    left: 20px;
+    top: 70px;
+    font-size: 20px;
+}
+
+.container a {
+    float: right;
+    position: relative;
+    bottom: 75px;
+    color: white;
+    text-decoration-line: none;
+    height: 50px;
+    width: 125px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 35px;
+    cursor: pointer;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.container a:hover {
+    color: black;
+    background-color: #c7ecee;
+}
+
+.container .signup {
+    right: 120px;
+    width: 130px;
+}
+
+.container .login {
+    right: 80px;
+} 
+
+input:focus {
+    outline: none;
+    color: grey;
+    border-bottom: 3px solid #7dd56f;
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+.form-signup {
+    margin-top: 2rem;
+    height: 34rem;
+}
+
+.form-signup h2 {
+    width: 20rem;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 10rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  .alert--success {
+    background-color: #20bf6b;
+  }
+  .alert--error {
+    background-color: #eb4d4b;
+  }
+  
+.secret-h2 {
+    width: 18rem;
+    display: block;
+    padding-top: 0px;
+    margin-left: -5px;
+}
+
+ul {
+    margin-left: 10%;
+    margin-top: 60px;
+    width: 60%;
+    border-radius: 7.5px;
+    box-shadow: 5px 5px 25px grey;
+    max-height: 15rem;
+    overflow: auto;
+    color: #4834DF;
+}
+
+li {
+    width: 90%;
+    word-wrap: break-word;
+    margin: 15px 0;
+    margin-left: 10px;
+    list-style-type: circle;
+}
+
+li:hover{
+    animation-name: list;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+}
+
+@keyframes list {
+    from{text-decoration-line: none;}
+    to{text-decoration-line: underline;}
+}
+
+.submit-secret {
+    margin-left: 10%;
+    margin-top: 70px;
+    height: 8rem;
+    width: 60%;
+}
+
+.submit-btn {
+    height: 38px;
+    width: 18%;
+    margin-top: 35px;
+}
+
+.submit-secret input {
+    position: relative;
+    top: 15px;
+    width: 95%;
+    left: 6px;
+}
+
+.logout-btn {
+    margin-left: 11.5%;
+    margin-top: 40px;
+    height: 35px;
+    width: 10%;
+    background-color: red
+}
