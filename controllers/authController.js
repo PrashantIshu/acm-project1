@@ -5,7 +5,6 @@ const User = require("../models/userModel");
 const { promisify } = require("util");
 const jwt = require('jsonwebtoken');
 const crypto = require("crypto");
-// const sendEmail = require('../utils/email');
 
 const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -25,7 +24,7 @@ const createSendToken = (user, res) => {
   
     res.cookie('jwt', token, cookieOptions);
   
-    // // Remove password from output
+    //  Remove password from output
     user.password = undefined;
   
     res.json({

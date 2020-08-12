@@ -16,8 +16,6 @@ Route
 
 Route
     .route('/:id')
-    .get(authController.protect, authController.restrictTo('admin'), secretController.getSecret)
     .delete(authController.protect, authController.restrictTo('admin'), secretController.deleteSecret)
-    .patch(authController.protect, authController.restrictTo('admin'), secretController.updateSecret);
 
 module.exports = Route;

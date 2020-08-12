@@ -12,13 +12,6 @@ const getsecret = async(secret, id) => {
         });
 
         if (res.data.status === 'success') {
-            // alert("Logged in successfully!");
-            // res.redirect('/api/v1/users/my-secrets');
-            
-            // showAlert('success', 'Logged in successfully!');
-            // window.setTimeout(() => {
-            //   location.assign('/my-secrets');
-            // }, 1500);
             location.reload();
         }
     } catch (err) {

@@ -20,11 +20,6 @@ exports.signup = catchAsync(async (req, res, next) => {
       title: "Sign up to register your account"
     });
 });
-//   exports.getAccount = (req, res) => {
-//     res.render('account', {
-//       title: "Your Account"
-//     });
-//   };
 
 exports.secrets = catchAsync(async (req, res, next) => {
   const secrets = await Secret.find({user: req.user.id});

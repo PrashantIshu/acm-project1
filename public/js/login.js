@@ -12,10 +12,7 @@ const login = async(email, password) => {
             }
         });
 
-        if (res.data.status === 'success') {
-            // alert("Logged in successfully!");
-            // res.redirect('/api/v1/users/my-secrets');
-            
+        if (res.data.status === 'success') {            
             showAlert('success', 'Logged in successfully!');
             window.setTimeout(() => {
               location.assign('/my-secrets');
