@@ -216,7 +216,7 @@ ul {
     width: 60%;
     border-radius: 7.5px;
     box-shadow: 5px 5px 25px grey;
-    max-height: 15rem;
+    height: 15rem;
     overflow: auto;
     color: #4834DF;
 }
@@ -267,4 +267,8 @@ li:hover{
     height: 35px;
     width: 10%;
     background-color: red
+}
+
+.logout-btn:hover {
+    background-color: #D63031;
 }

@@ -6,6 +6,7 @@ exports.landing = catchAsync( async(req, res) => {
     
     res.render('landing', {
         title: 'Secrets.io',
+        user: res.locals.user
     });
 });
 

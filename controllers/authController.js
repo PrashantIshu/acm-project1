@@ -138,6 +138,8 @@ exports.isLoggedIn = async(req, res, next) => {
             if(changedPassword) {
                 return next();
             }
+            
+            req.user = currentUser;
 
             res.locals.user = currentUser; //from this 'res.locals.user' we can use the currently logged in user with the keyword 'user' in our pug templates
             return next();

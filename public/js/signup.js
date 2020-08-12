@@ -15,8 +15,6 @@ const signup = async(name, email, password, confirmPassword) => {
         });
 
         if (res.data.status === 'success') {
-            // alert("Sign up successfull!");
-            // res.redirect('/api/v1/users/my-secrets');
             
             showAlerts('success', 'Logged in successfully!');
             window.setTimeout(() => {
