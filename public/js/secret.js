@@ -5,7 +5,7 @@ const getsecret = async(secret, id) => {
     try{
         const res = await axios({
             method: 'POST',
-            url: `http://localhost:3000/api/v1/users/${id}/secrets`,
+            url: `/api/v1/users/${id}/secrets`,
             data: {
                 secrets: secret
             }

@@ -2,7 +2,6 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
 
-// console.log(process.env.PHONE);
 
 const DB = 'mongodb+srv://prashant:<password>@cluster0-yfpqt.mongodb.net/project1-app?retryWrites=true&w=majority'.replace('<password>', 'prashant21102001');
 
@@ -41,9 +40,7 @@ const deleteData = async () => {
 
 
 if (process.argv[2] === '--import') {
-    // console.log("test1");
     importData();
-    // console.log("test2");
     
 } else if (process.argv[2] === '--delete') {
     deleteData();

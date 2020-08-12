@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const path = require('path');
 
 const userRoutes = require('../Project_1/routes/userRoutes');
@@ -29,10 +30,9 @@ mongoose.connect(DB , {
     useUnifiedTopology: true ,
 }).then(() => console.log("DB connection successfull"));
 
-app.use((req, res, next) => {
-    // console.log(req.headers);
-    // console.log(req.cookies);
+app.use(compression());
 
+app.use((req, res, next) => {
     next();
 });
 

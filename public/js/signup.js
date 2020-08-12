@@ -2,11 +2,10 @@ const signupForm = document.querySelector('.form-signup');
 // const logOutBtn = document.querySelector('.nav__el--logout');
 
 const signup = async(name, email, password, confirmPassword) => {
-    console.log(email, password);
     try{
         const res = await axios({
             method: 'POST',
-            url: 'http://localhost:3000/api/v1/users/signup',
+            url: '/api/v1/users/signup',
             data: {
                 name: name,
                 email: email,
@@ -26,7 +25,6 @@ const signup = async(name, email, password, confirmPassword) => {
         }
     } catch (err) {
         showAlerts('error', err.response.data.message);
-        // console.log(err.response.data);
     }
 };
 
@@ -56,26 +54,3 @@ const showAlerts = (type, msg) => {
     document.querySelector('body').insertAdjacentHTML('afterbegin', markup);
     window.setTimeout(hideAlerts, 5000);
 };
-
-//////////////////////////////// LOG OUT ////////////////////////////////
-// if(logOutBtn) {
-//     document.querySelector('.nav__el--logout').addEventListener('click', event => {
-//         logout();
-//     });
-// }
-
-// const logout = async() => {
-//     try {
-//         console.log("Hello from the logout button");
-//         const res = await axios({
-//             method: 'GET',
-//             url: 'http://localhost:3000/api/v1/users/logout'
-//         });
-//         if(res.data.status === "success") {
-//             location.reload(true);
-//         }
-//     } catch(err) {
-//         console.log(err.response);
-//         showAlert('error', 'Error logging out! Try again.');
-//     }
-// };
