@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 
-const DB = process.env.DATABASE.replace('<password>', process.env.DATABASE_PASSWORD);
+const DB = 'mongodb+srv://prashant:<password>@cluster0-yfpqt.mongodb.net/project1-app?retryWrites=true&w=majority'.replace('<password>', process.env.DATABASE_PASSWORD);
 
 mongoose.connect(DB , {
     useNewUrlParser : true,
